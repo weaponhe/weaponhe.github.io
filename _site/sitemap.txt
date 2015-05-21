@@ -1,0 +1,20 @@
+
+  /pages/about.html
+
+  /pages/archive.html
+
+  /pages/atom.xml
+
+  /index.html
+
+  /sitemap.txt
+
+
+
+  /2014/07/31/LaTeX-beamer-slides.html
+
+  /2014/07/25/matrix-completion.html
+
+  /2011/06/01/Seeker-reply-me.html
+
+  /2010/01/01/Book-List-2010.html
