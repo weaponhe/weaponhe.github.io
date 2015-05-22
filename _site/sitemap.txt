@@ -11,10 +11,6 @@
 
 
 
-  /2014/07/31/LaTeX-beamer-slides.html
+  /2015/01/29/Book-List-2015.html
 
-  /2014/07/25/matrix-completion.html
-
-  /2011/06/01/Seeker-reply-me.html
-
-  /2010/01/01/Book-List-2010.html
+  /2014/05/21/Hello-World.html
