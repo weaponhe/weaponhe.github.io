@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Word Search
-category: LeetcodeOJ
+category: OJ
 tags: Array Backtracking
 ---
 ###问题描述
