@@ -6,10 +6,5 @@ tags: Array Backtracking
 ---
 ###问题描述
 *emphasis*
-<table>
-    <tr>
-        <td>*emphasis*</td>
-    </tr>
-</table>
-
+<div>*emphasis*</div>
 ###问题描述
