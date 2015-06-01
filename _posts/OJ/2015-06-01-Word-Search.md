@@ -24,7 +24,7 @@ word = `"ABCB"`, -> returns `false`.
 
 ###解决方案一
 
-*DFS
+- DFS
 
 ```
 procedure DFS(G,v)
