@@ -4,7 +4,7 @@ title: Word Search
 category: OJ
 tags: Array Backtracking
 ---
-###问题描述
+##问题描述
 Given a 2D board and a word, find if the word exists in the grid.
 The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
 For example,
@@ -22,9 +22,9 @@ word = `"ABCCED"`, -> returns `true`,
 word = `"SEE"`, -> returns `true`,  
 word = `"ABCB"`, -> returns `false`.
 
-###解决方案
+##解决方案
 
-####DFS
+###DFS
 
 我们可以将题目描述的搜索过程转化为在从一棵Tree的根节点开始，搜索以word字符串为顺序的路径。这样一来便可以采用深度优先搜索的思想来解决的这个问题。而如何将board转化为Tree是解决问题的关键。我们发现，每一次迭代之后有上下左右四个搜索方向，这相邻的4个节点（也可能小于4）便可看为父节点的四个子节点。将这个过程进行h次，构造出一棵高度为h的Tree。board中有多少个字符，便可以构造出多少棵这样的Tree。也就是说，题目转化为如何在这片Forest中找出一条以word字符串为顺序的路径。
 
@@ -40,11 +40,11 @@ procedure DFS(G,v)
 
 DFS只需要找出一个相同的节点，而题目需要的是找出一条相同的路径。因此，在DFS只需要保存每个点的状态，而在该题目中我们需要保存一条路径中所有的点的状态。这是需要对DFS进行改造的地方。
 
-####复杂度
+###复杂度
 
 设board中有n个节点，word中有m个字符，则该算法的时间复杂度为`O(nm)`。
 
-####代码
+###代码
 
 ```c++
 class Solution {
