@@ -129,7 +129,6 @@ category: 技术
 		mutate();
 		draw(CONTEXT_EVOLVE, INDIV_EVOLVE);
 		FITNESS_EVOLVE = compute_fitness();
-		console.log(FITNESS_EVOLVE + " " + FITNESS_SOURCE);
 
 		if (FITNESS_EVOLVE < FITNESS_SOURCE) {
 			FITNESS_SOURCE = FITNESS_EVOLVE;
