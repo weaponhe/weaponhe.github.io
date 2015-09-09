@@ -3,6 +3,35 @@ layout: post
 title: Evolution of picture
 category: 技术
 ---
+<style type="text/css">
+	.show_canvas{
+	text-align: center;
+	margin-bottom: 10px;
+	}
+
+	.control_form{
+		text-align: center;
+		margin-bottom: 10px;
+	}
+
+	.canvas{
+		margin: 10px;
+	}
+
+	#canvas_source{
+		border:1px solid #DDD;
+	}
+	#canvas_evolve{
+		border:1px solid #DDD;
+	}
+	#button_start{
+		width: 200px;
+	}
+	#button_stop{
+		width: 200px;
+	}
+</style>
+
 <script type="text/javascript">
 	var IMAGE_DEFAULT = "/public/img/mona_lisa_crop.jpg";
 	var IMAGE = new Image();
@@ -209,9 +238,15 @@ category: 技术
 	}
 </script>
 
-<div>
-	<canvas id="canvas_source" width=200 height=200></canvas>
-	<canvas id="canvas_evolve" width=200 height=200></canvas>
-	<input type="button" value="Start" onclick="start()" />
-	<input type="button" value="Stop" onclick="stop()" />
-<div>
+<div class="container">
+	<div class="row show_canvas">
+		<canvas id="canvas_source" class="canvas" width=200 height=200></canvas>
+		<canvas id="canvas_evolve" class="canvas" width=200 height=200></canvas>
+	</div>
+	<div class="row control_form">
+		<button id="button_start" type="button" class="btn btn-primary btn-lg" onclick="start()"> Start </button>
+	</div>
+	<div class="row control_form">
+		<button id="button_stop" type="button" class="btn btn-default btn-lg" onclick="stop()"> Stop </button>
+	</div>
+</div>
