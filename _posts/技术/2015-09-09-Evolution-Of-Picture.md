@@ -33,7 +33,7 @@ category: 技术
 </style>
 
 <script type="text/javascript">
-	var IMAGE_DEFAULT = "/public/img/mona_lisa_crop.jpg";
+	var IMAGE_DEFAULT = "/public/img/evolution.jpg";
 	var IMAGE = new Image();
 
 	var ID_EVOLVE = 0;
