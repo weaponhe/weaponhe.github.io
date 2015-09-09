@@ -30,6 +30,11 @@ category: 技术
 	#button_stop{
 		width: 200px;
 	}
+	#inputFile{
+		margin-left: auto;
+	    margin-right: auto;
+	    width: 200px;
+	}
 </style>
 
 <script type="text/javascript">
@@ -63,6 +68,19 @@ category: 技术
 	var FITNESS_SOURCE = FITNESS_MAX;
 	var FITNESS_EVOLVE = FITNESS_MAX;
 
+	function inputFile(sourceId) {
+		if (typeof FileReader === 'undefined') {
+			alert('Your browser does not support FileReader...');
+			return;
+		}
+		var reader = new FileReader();
+
+		reader.onload = function(e) {
+			IMAGE.src = this.result;
+		}
+		reader.readAsDataURL(IMAGE_FILE = document.getElementById(sourceId).files[0]);
+	}
+	
 	function init() {
 		IMAGE.src = IMAGE_DEFAULT;
 		IMAGE.onload = function() {
@@ -247,5 +265,10 @@ category: 技术
 	</div>
 	<div class="row control_form">
 		<button id="button_stop" type="button" class="btn btn-default btn-lg" onclick="stop()"> Stop </button>
+	</div>
+	<div class="row control_form">
+		<div id="button_input_photo" class="form-group">
+	    	<input type="file" id="inputFile" name="inputFile" onChange="inputFile(this.id)" name="inputFile" /> 
+		</div>
 	</div>
 </div>
