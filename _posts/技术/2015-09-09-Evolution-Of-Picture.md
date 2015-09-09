@@ -68,7 +68,6 @@ category: 技术
 		IMAGE.onload = function() {
 			init_canvas();
 			init_data();
-			unitTest();
 		}
 	}
 	window.onload = init();
