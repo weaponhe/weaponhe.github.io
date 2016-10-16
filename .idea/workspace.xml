@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8865dfc3-4113-44a2-b559-7c538f09eaec" name="Default" comment="" />
+    <list default="true" id="8865dfc3-4113-44a2-b559-7c538f09eaec" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/markown-editor.html" afterPath="$PROJECT_DIR$/markown-editor.html" />
+    </list>
     <ignored path="weaponhe.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -46,8 +48,8 @@
       <file leaf-file-name="markown-editor.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/markown-editor.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="4" column="128" selection-start-line="4" selection-start-column="128" selection-end-line="4" selection-end-column="128" />
+            <state relative-caret-position="116">
+              <caret line="4" column="96" selection-start-line="4" selection-start-column="96" selection-end-line="4" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -150,8 +152,11 @@
       <recent name="D:\fe\workspace\weaponhe.github.io" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.markown-editor.html">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/weaponhe.github.io/index.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="markown-editor.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/weaponhe.github.io/markown-editor.html">
       <method />
     </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
@@ -207,12 +212,14 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.markown-editor.html" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.markown-editor.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -227,12 +234,12 @@
       <option name="presentableId" value="Default" />
       <updated>1475115301684</updated>
       <workItem from="1475115303005" duration="955000" />
-      <workItem from="1476581215217" duration="798000" />
+      <workItem from="1476581215217" duration="1070000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1753000" />
+    <option name="totallyTimeSpent" value="2025000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -322,8 +329,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/markown-editor.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="4" column="128" selection-start-line="4" selection-start-column="128" selection-end-line="4" selection-end-column="128" />
+        <state relative-caret-position="116">
+          <caret line="4" column="96" selection-start-line="4" selection-start-column="96" selection-end-line="4" selection-end-column="96" />
           <folding />
         </state>
       </provider>
