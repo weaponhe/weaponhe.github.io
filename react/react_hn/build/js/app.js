@@ -1,0 +1,1 @@
+console.error("Error: SyntaxError: Unexpected token } in JSON at position 87 while parsing json file /Users/weaponhe/workspace/weaponhe.github.io/react/react_hn/package.json");

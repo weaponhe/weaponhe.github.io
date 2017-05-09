@@ -1,0 +1,20 @@
+.newsItem {
+    /* ... */
+    align-items: baseline;
+    display: flex;
+}
+
+.newsItem-itemText {
+    flex-grow: 1;
+}
+
+.newsItem-rank {
+    flex-basis: 25px;
+    font-size: 10pt;
+    text-align: right;
+}
+
+.newsItem-vote {
+    flex-basis: 15px;
+    text-align: center;
+}
