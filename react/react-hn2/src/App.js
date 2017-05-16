@@ -1,5 +1,7 @@
 import React from 'react';
 import {Route} from 'react-router-dom'
+import './App.css'
+
 import Header from './header/header'
 import ItemsList from './ItemsList/ItemsList'
 function generateItemsList(type) {
