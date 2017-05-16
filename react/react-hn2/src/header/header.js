@@ -11,14 +11,13 @@ export default class Header extends React.Component {
   render() {
     return (
       <header>
-        <NavLink to="/news" className="logo"><img src="img/logo.png" alt="logo"/></NavLink>
-        <NavLink to="/news" className="title" activeClassName="active">React HN</NavLink>
+        <NavLink to="/top" className="logo"><img src="img/logo.png" alt="logo"/></NavLink>
+        <NavLink to="/top" className="title" activeClassName="active">React HN</NavLink>
         <nav>
-          <NavLink to="/newest" activeClassName="active">new</NavLink>
-          <NavLink to="/newcomments" activeClassName="active">comments</NavLink>
+          <NavLink to="/new" activeClassName="active">new</NavLink>
           <NavLink to="/show" activeClassName="active">show</NavLink>
           <NavLink to="/ask" activeClassName="active">ask</NavLink>
-          <NavLink to="/jobs" activeClassName="active">jobs</NavLink>
+          <NavLink to="/job" activeClassName="active">job</NavLink>
         </nav>
         <a className="settings" onClick={this.toggleSettings}>
           {this.state.showSettings ? 'hide settings' : 'settings'}

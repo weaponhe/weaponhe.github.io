@@ -1,15 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
+  BrowserRouter as Router
 } from 'react-router-dom'
-
-import Header from './header/header'
-
+import App from './App'
 ReactDOM.render((
   <Router>
-    <Header/>
+    <App/>
   </Router>
 ), document.getElementById('root'))
