@@ -31,7 +31,7 @@ export default class ItemsList extends React.Component {
     if (this.state.items.length === 0 && this.state.ids.length === 0) {
       let dummyItems = []
       for (let i = 0; i < 10; i++) {
-        dummyItems.push(<Spinner key={i} size={6} spacing={2}/>)
+        dummyItems.push(<Spinner key={i}/>)
       }
 
       return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Spinner.css'
-export default class ItemSpinner extends React.Component {
+export default class Spinner extends React.Component {
   render() {
     var bounceSize = this.props.size + 'px'
     var bounceStyle = {height: bounceSize, width: bounceSize, marginRight: this.props.spacing + 'px'}
@@ -12,3 +12,4 @@ export default class ItemSpinner extends React.Component {
     </div>
   }
 }
+Spinner.defaultProps = {size: 6, spacing: 2}
