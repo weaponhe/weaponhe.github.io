@@ -3,9 +3,9 @@ import {Route} from 'react-router-dom'
 import './App.css'
 
 import Header from './header/header'
-import ItemsList from './ItemsList/ItemsList'
+import ItemsList from './ItemList/ItemList'
 function generateItemsList(type) {
-  return () => <ItemsList type={type}/>
+  return (props) => <ItemsList {...props} type={type}/>
 }
 let Top = generateItemsList('top')
 let New = generateItemsList('new')
@@ -14,6 +14,9 @@ let Ask = generateItemsList('ask')
 let Job = generateItemsList('job')
 
 export default class App extends React.Component {
+  componentWillUnmount() {
+  }
+
   render() {
     return (
       <div className="app">
@@ -27,3 +30,5 @@ export default class App extends React.Component {
     )
   }
 }
+
+
