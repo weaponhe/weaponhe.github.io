@@ -6,7 +6,8 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^1.6.8"
+    "electron": "^1.6.8",
+    "electron-packager": "^8.7.0"
   },
   "dependencies": {
     "nconf": "^0.8.4"
