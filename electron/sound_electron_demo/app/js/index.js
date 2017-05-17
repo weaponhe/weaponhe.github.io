@@ -1,4 +1,7 @@
 const {ipcRenderer} = require('electron')
+const remote = require('electron').remote;
+const {Tray, Menu} = remote.require('electron');
+const path = require('path');
 
 var closeEl = document.querySelector('.close');
 closeEl.addEventListener('click', function () {
@@ -33,3 +36,34 @@ var settingsEl = document.querySelector('.settings');
 settingsEl.addEventListener('click', function () {
   ipcRenderer.send('open-settings-window');
 });
+
+
+var trayIcon = null;
+
+if (process.platform === 'darwin') {
+  trayIcon = new Tray(path.join(__dirname, 'img/tray-iconTemplate.png'));
+}
+else {
+  trayIcon = new Tray(path.join(__dirname, 'img/tray-icon-alt.png'));
+}
+
+var trayMenuTemplate = [
+  {
+    label: 'Sound machine',
+    enabled: false
+  },
+  {
+    label: 'Settings',
+    click: function () {
+      ipcRenderer.send('open-settings-window');
+    }
+  },
+  {
+    label: 'Quit',
+    click: function () {
+      ipcRenderer.send('close-main-window');
+    }
+  }
+];
+var trayMenu = Menu.buildFromTemplate(trayMenuTemplate);
+trayIcon.setContextMenu(trayMenu);
