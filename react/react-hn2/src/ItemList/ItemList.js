@@ -4,6 +4,7 @@ import querystring from 'querystring'
 import ItemStore from '../store/itemStore'
 import Item from './Item'
 import Spinner from '../Spinner/Spinner'
+import Pager from '../pager/pager'
 import './ItemList.css'
 
 
@@ -18,7 +19,6 @@ export default class ItemList extends React.Component {
       limit: props.limit
     }
   }
-
 
   componentWillMount() {
     this.store = new ItemStore(this.props.type)
@@ -44,15 +44,21 @@ export default class ItemList extends React.Component {
         dummyItems.push(<Spinner key={i}/>)
       }
       return (
-        <ol>
-          {dummyItems}
-        </ol>
+        <div>
+          <ol start={page.startIndex + 1}>
+            {dummyItems}
+          </ol>
+          <Pager route={this.props.type} hasNext={page.hasNext} page={page.pageNum}></Pager>
+        </div>
       )
     }
     return (
-      <ol>
-        {this.renderItems(page.startIndex, page.endIndex)}
-      </ol>
+      <div>
+        <ol start={page.startIndex + 1}>
+          {this.renderItems(page.startIndex, page.endIndex)}
+        </ol>
+        <Pager route={this.props.type} hasNext={page.hasNext} page={page.pageNum}></Pager>
+      </div>
     )
   }
 
