@@ -4,6 +4,7 @@ import './App.css'
 
 import Header from './header/header'
 import ItemsList from './ItemList/ItemList'
+import ItemStore from './store/itemStore'
 function generateItemsList(type) {
   return (props) => <ItemsList {...props} type={type}/>
 }
@@ -14,7 +15,17 @@ let Ask = generateItemsList('ask')
 let Job = generateItemsList('job')
 
 export default class App extends React.Component {
+  handleBeforeUnload() {
+    ItemStore.saveSession()
+  }
+
+  componentWillMount() {
+    ItemStore.loadSession()
+    window.addEventListener('beforeunload', this.handleBeforeUnload)
+  }
+
   componentWillUnmount() {
+    window.removeEventListener('beforeunload', this.handleBeforeUnload)
   }
 
   render() {

@@ -3,6 +3,23 @@ import {Link} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import ItemStore from '../store/itemStore'
 import Spinner from '../Spinner/Spinner'
+
+const makeCancelable = (promise) => {
+  let hasCanceled_ = false;
+
+  const wrappedPromise = new Promise((resolve, reject) => {
+    promise.then((val) =>
+      !hasCanceled_ && resolve(val)
+    )
+  });
+
+  return {
+    promise: wrappedPromise,
+    cancel() {
+      hasCanceled_ = true;
+    },
+  };
+};
 export default class Item extends React.Component {
   constructor(props) {
     super(props)
@@ -11,13 +28,22 @@ export default class Item extends React.Component {
     }
   }
 
+  componentWillUpdate(nextProps, nextState) {
+    if (nextState.item !== null) {
+      this.props.store.updateItem(nextState.item, this.props.index)
+    }
+  }
+
   componentWillMount() {
-    this.props.store.fetchItemById(this.props.id).then((item) => {
+    this.p = makeCancelable(this.props.store.fetchItemById(this.props.id))
+    this.p.promise.then((item) => {
       this.setState({item})
-      console.log(item)
     })
   }
 
+  componentWillUnmount() {
+    this.p.cancel()
+  }
 
   render() {
     if (!this.state.item || !this.state.item.id) {

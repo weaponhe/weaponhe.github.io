@@ -14,16 +14,21 @@ export default class ItemList extends React.Component {
     this.state = {
       ITEMS_PER_PAGE: 10,
       ids: [],
-      items: [],
+      stories: [],
       limit: props.limit
     }
   }
 
-  componentDidMount() {
+
+  componentWillMount() {
     this.store = new ItemStore(this.props.type)
     this.store.addListener('update', this.handleUpdate)
     this.store.start()
     this.setState(this.store.getState())
+  }
+
+  componentWillUnmount() {
+    this.store.removeListener('update', this.handleUpdate)
   }
 
   handleUpdate = (update) => {
@@ -33,7 +38,7 @@ export default class ItemList extends React.Component {
 
   render() {
     let page = pageCalc(this.getPageNumber(), this.state.ITEMS_PER_PAGE, this.props.limit)
-    if (this.state.items.length === 0 && this.state.ids.length === 0) {
+    if (this.state.stories.length === 0 && this.state.ids.length === 0) {
       let dummyItems = []
       for (let i = page.startIndex; i < page.endIndex; i++) {
         dummyItems.push(<Spinner key={i}/>)
@@ -55,7 +60,7 @@ export default class ItemList extends React.Component {
     let rendered = []
     for (let i = startIndex; i < endIndex; i++) {
       let id = this.state.ids[i],
-        item = this.state.items[i]
+        item = this.state.stories[i]
       rendered.push(<Item key={id} index={i} id={id} cachedItem={item} store={this.store}/>)
     }
     return rendered
